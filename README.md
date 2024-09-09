@@ -53,12 +53,24 @@ tagro
 │  │  │  └─ 9369804a3c45bbe98fb4cbd907015e5e608c78
 │  │  ├─ 4a
 │  │  │  └─ 1f73811741e9b9b10e60f7a87847d47181c95d
+│  │  ├─ 4f
+│  │  │  └─ 01f515331f862fdbc0b8cffdd59cae910ba290
+│  │  ├─ 54
+│  │  │  └─ f1aa1278015876b6494f6301acc7a0cd86f160
 │  │  ├─ 5b
 │  │  │  └─ 4fd41afedf96e3c87148cf9d7aca86a1f4d34e
+│  │  ├─ 5d
+│  │  │  └─ f05af0a6f451313851aeb43fcdddaee2dd8af5
 │  │  ├─ 61
 │  │  │  └─ 3d0c0f16f6535e347d8f116a63d0e014d1d18a
+│  │  ├─ 65
+│  │  │  └─ 0f772b01d7518d5218b9de489a5ed51ece00b5
 │  │  ├─ 67
 │  │  │  └─ b1fb72b90371d22b11fbaf109e22596f6d243d
+│  │  ├─ 6f
+│  │  │  └─ 6186c484d205e77a2c349bc272691da8f209e0
+│  │  ├─ 71
+│  │  │  └─ ec900a6831b4afaef215ea7ac1d08a3257bb21
 │  │  ├─ 75
 │  │  │  └─ 886d45f64530a3d3e7fbb48af489eccdf84b35
 │  │  ├─ 8a
@@ -71,22 +83,32 @@ tagro
 │  │  │  └─ 1dcfdaf1a6857c5f83dc27019c7600e1ffaff8
 │  │  ├─ a3
 │  │  │  └─ 9a3915eb16aedc539a613b97debfc208056292
+│  │  ├─ b0
+│  │  │  └─ c47ac1bc854675f3be5aa55b4293b8c2986374
+│  │  ├─ b8
+│  │  │  └─ 376731afcb94ef30d90356673bbb537912ea49
 │  │  ├─ b9
 │  │  │  └─ 226273ef4db09577182ec52e9c4cb245f07280
 │  │  ├─ ba
 │  │  │  ├─ 0402531d27247ba488f0eae16d40520bed7135
 │  │  │  └─ d1f9903a041eead0f47341db40baa532802bbe
 │  │  ├─ bf
-│  │  │  └─ 87cb8a291862b68d9921fca68fac47f2b22412
+│  │  │  ├─ 87cb8a291862b68d9921fca68fac47f2b22412
+│  │  │  └─ bbbbc639816b862dde54d988d2fe065ba94787
 │  │  ├─ cd
 │  │  │  └─ 588b73c2e866e81030cc73c977ff6bee8351d6
+│  │  ├─ d1
+│  │  │  └─ 1a288954b727a3ef10f371de2b1dcb7b8efd2a
 │  │  ├─ d5
 │  │  │  └─ 64d0bc3dd917926892c55e3706cc116d5b165e
 │  │  ├─ dc
-│  │  │  └─ 07dbd204db339413fae19894b1b432b0a4d284
+│  │  │  ├─ 07dbd204db339413fae19894b1b432b0a4d284
+│  │  │  └─ 58320daa71104a712b956fbcab1a37371d1a88
 │  │  ├─ e6
+│  │  │  ├─ 88f135ddbd3ec5a2d5827428f5c24313c8d6a8
 │  │  │  ├─ 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
-│  │  │  └─ e84d9935dca8d4a4d36ab838abaa61abae0a07
+│  │  │  ├─ e84d9935dca8d4a4d36ab838abaa61abae0a07
+│  │  │  └─ f45c8b2a16f389c25b06a1cbdec38fcfb3edcd
 │  │  ├─ e7
 │  │  │  └─ 59b4a3c875ec657f75a75ba78b40b590e5765d
 │  │  ├─ e9
@@ -96,6 +118,8 @@ tagro
 │  │  │  └─ 5c3a90d3844d338db3698daf5f39f848208c74
 │  │  ├─ fb
 │  │  │  └─ 63ed5099497340b62547f966cac6c78201952b
+│  │  ├─ fc
+│  │  │  └─ 7b8004fcc0208687df121b80419f1d258c8d15
 │  │  ├─ info
 │  │  └─ pack
 │  └─ refs
@@ -120,6 +144,9 @@ tagro
    ├─ patches.txt
    ├─ public
    │  ├─ .gitkeep
+   │  ├─ assets
+   │  │  └─ images
+   │  │     └─ Logo.png
    │  ├─ css
    │  └─ js
    ├─ tagro
@@ -132,15 +159,13 @@ tagro
    │  ├─ __init__.py
    │  ├─ includes
    │  │  ├─ footer.html
+   │  │  ├─ navbar.css
    │  │  └─ navbar.html
    │  └─ pages
    │     └─ __init__.py
    └─ www
       ├─ about-us
       │  └─ index.html
-      ├─ assets
-      │  └─ images
-      │     └─ Logo.png
       ├─ cart
       │  └─ index.html
       ├─ check-out

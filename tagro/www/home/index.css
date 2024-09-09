@@ -10,8 +10,8 @@ body {
 }
 
 header {
-    background-color: #007bff;
-    color: white;
+    background-color: #949494;
+    color: rgb(255, 255, 255);
     padding: 20px;
     text-align: center;
 }
@@ -35,9 +35,8 @@ nav a {
 }
 
 .hero {
-    margin-top: 20px;
-    padding: 40px;
-    background: url('hero-background.jpg') no-repeat center center/cover;
+    background: url('../assets/images/Egypt-New-Capital-City-1.png') no-repeat center center/cover;
+    
 }
 
 .hero h1 {
