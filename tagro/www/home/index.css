@@ -1,72 +1,482 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+body, html {
+    font-family: 'Poppins', sans-serif;
 }
 
-header {
-    background-color: #949494;
-    color: rgb(255, 255, 255);
-    padding: 20px;
-    text-align: center;
+/* Header & Navbar Styles */
+.header-menu {
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding: 15px 0;
 }
 
-nav {
+.header-bg {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 }
 
-nav ul {
-    list-style: none;
+.logo {
+    height: 60px;
+}
+
+.nav-menu {
     display: flex;
     gap: 20px;
 }
 
-nav a {
-    color: white;
+.menu-item {
     text-decoration: none;
-    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
 }
 
+.menu-item:hover {
+    color: #0056b3;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #D9D9D9;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    right: 0;
+    z-index: 1;
+    min-width: 100px;
+}
+
+.dropdown-content a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
 .hero {
-    background: url('../assets/images/Egypt-New-Capital-City-1.png') no-repeat center center/cover;
-    
+    height: 100vh;
+    background-image: url('/assets/images/Egypt-New-Capital-City-1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: 0; /* Removed the gap */
+    padding: 0;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 80%;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.section {
-    padding: 50px;
-    text-align: center;
-}
-
-.about, .ceo, .vision, .responsibility {
-    background-color: #f4f4f4;
+    font-size: 3.5rem;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
-blockquote {
-    font-style: italic;
+.quote-button {
+    background-color: #334586;
+    color: white;
+    border: none;
+    padding: 15px 30px;
     font-size: 1.2rem;
-    border-left: 5px solid #007bff;
-    padding-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
+.quote-button:hover {
+    background-color: #273768;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .quote-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .language-dropdown {
+        margin-left: 10px;
+    }
+}
+
+
+/* Products Section */
+.products-section {
+    background-color: #e7f0f5;
+    padding: 50px 20px;
     text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
+}
+
+.products-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: #333;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 200px;
+    text-align: center;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
     width: 100%;
+    height: auto;
+    border-bottom: 3px solid #d9d9d9;
+}
+
+.product-info {
+    padding: 15px 0;
+}
+
+.product-info p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.why-choose-us h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Certifications */
+.certifications {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.certification-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.certification-item h3 {
+    font-size: 1.5rem;
+    color: #334586;
+    margin-top: 10px;
+}
+
+/* Clients Section */
+.clients-section h3 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    font-weight: 500;
+    justify-content: center;
+    text-align: center;
+}
+
+.clients-carousel {
+    position: relative; /* For positioning navigation buttons */
+    display: flex;
+    justify-content: center; /* Center carousel */
+    margin-bottom: 20px;
+}
+
+.clients-carousel img {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.view-more {
+    display: inline-block;
+    color: #334586;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+/* Embedded Video Section */
+.video-section {
+    margin-top: 40px;
+    height: 400px;
+}
+
+.video-section iframe {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #334586; /* Adjust color if needed */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: background color */
+    width: 40px; /* Adjust size */
+    height: 40px; /* Adjust size */
+    border-radius: 50%; /* Make them circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Ensure they are above other content */
+}
+
+/* Optional: Style for hover state */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 1); /* Change background on hover */
+}
+
+/* Navigation Button Positioning */
+.swiper-button-next {
+    right: 10px; /* Position to the right */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Position to the left */
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #263640;
+    color: white;
+
+}
+
+/* Subscription Section */
+.footer-subscribe {
+    padding: 20px;
+    background-color: #D9D9D9;
+    color: #263640;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: start;
+    height: 180px;
+}
+
+.footer-subscribe h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #7e7e7e;
+}
+
+.footer-subscribe p {
+    margin-bottom: 20px;
+}
+
+.footer-subscribe-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.footer-subscribe-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-subscribe input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1.2rem;
+    width: 70%;
+    max-width: 300px;
+}
+
+.footer-subscribe button {
+    background-color: #263640;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Content Section */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: start;
+}
+
+.footer-content > div {
+    flex: 1;
+    margin: 10px 20px;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-middle-left, .footer-middle-right {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footer-middle-left i, .footer-middle-right i, .footer-right i {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.footer-left p, .footer-middle-left p, .footer-middle-right p, .footer-right p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+/* Copyright */
+.footer-copyright {
+    text-align: center;
+    padding: 10px;
+    background-color: #263640;
+    margin-top: 20px;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #C1CCDB;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer-subscribe {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-content > div {
+        margin: 10px 0;
+    }
+
+    .footer-subscribe input {
+        width: 100%;
+    }
 }
