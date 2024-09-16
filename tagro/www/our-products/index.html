@@ -1,47 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tagro Egypt - Leading Piping Solutions</title>
+    <title>Tagro - Piping Solutions</title>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
 </head>
-<body>
-    <header>
-        {% include 'templates/includes/navbar.html' %}
 
-        <div class="hero">
-            <h1>Leading Piping Solutions Since 1997</h1>
-            <p>Delivering superior PPR, PPH, and UPVC piping solutions for over 25 years.</p>
+<body>
+    <header class="header-menu">
+        <div class="header-bg">
+            <img src="../assets/images/Logo.png" class="logo" alt="Tagro logo" />
+            <nav class="nav-menu">
+                <a href="#" class="menu-item">Home</a>
+                <a href="#" class="menu-item">Our Products</a>
+                <a href="#" class="menu-item">Projects</a>
+                <a href="#" class="menu-item">Downloads</a>
+                <a href="#" class="menu-item">About Us</a>
+                <a href="#" class="menu-item">Services</a>
+                <a href="#" class="menu-item">News and Events</a>
+            </nav>
+
+            <!-- Language Dropdown -->
+            <div class="language-dropdown">
+                <button class="dropdown-button">Language</button>
+                <div class="dropdown-content">
+                    <a href="#">English</a>
+                    <a href="#">عربي</a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <section id="about" class="section about">
-        <h2>About Tagro Egypt</h2>
-        <p>Founded in 1997, Tagro Egypt is a leading provider of high-quality piping solutions, specializing in PPR, PPH, and UPVC pipes and fittings. With over 25 years of experience, we are committed to delivering superior products that meet the highest international standards.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Pure Flow,<br>Built to Last</h1>
+            <button class="quote-button">Get a Quote</button>
+        </div>
     </section>
 
-    <section id="ceo" class="section ceo">
-        <h2>Word of the CEO</h2>
-        <blockquote>
-            “Tagro means durability and strength in the Egyptian ancient language. For our company, it is more than just a name; it is a way of thinking as we always perceive durability as the quality of our products as the first priority."
-        </blockquote>
-        <p>- CEO of Tagro Egypt</p>
+    <!-- Products Section -->
+    <section class="products-section">
+        <h2>Products</h2>
+        <div class="products-grid">
+            <!-- Product 1: PP-R -->
+            <div class="product-item">
+                <img src="../assets/images/ppr.png" alt="PP-R Pipes">
+                <div class="product-info">
+                    <p>PP-R</p>
+                </div>
+            </div>
+            <!-- Product 2: PVC -->
+            <div class="product-item">
+                <img src="../assets/images/pvc.png" alt="PVC Pipes">
+                <div class="product-info">
+                    <p>PVC</p>
+                </div>
+            </div>
+            <!-- Product 3: UPVC & TC -->
+            <div class="product-item">
+                <img src="../assets/images/upvc.png" alt="UPVC & TC Pipes">
+                <div class="product-info">
+                    <p>UPVC & TC</p>
+                </div>
+            </div>
+            <!-- Product 4: PPH -->
+            <div class="product-item">
+                <img src="../assets/images/pph.png" alt="PPH Pipes">
+                <div class="product-info">
+                    <p>PPH</p>
+                </div>
+            </div>
+            <!-- Product 5: HDPE -->
+            <div class="product-item">
+                <img src="../assets/images/hdpe.png" alt="HDPE Pipes">
+                <div class="product-info">
+                    <p>HDPE</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="vision" class="section vision">
-        <h2>Our Vision & Mission</h2>
-        <p><strong>Vision:</strong> Tagro’s mission is to become the leading worldwide corporate providing infrastructure supplies while elevating international safety standards.</p>
-        <p><strong>Mission:</strong> Our mission is to deliver the highest quality while making it possible for everyone to afford a fully integrated infrastructure.</p>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+
+        <div class="certifications">
+            <div class="certification-item">
+                <p>Certified by</p>
+                <h3>+40 Worldwide Consultants</h3>
+            </div>
+            <div class="certification-item">
+                <img src="../assets/images/iso.png" alt="ISO Certification">
+                <p>Certified by</p>
+                <h3>ISO</h3>
+            </div>
+            <div class="certification-item">
+                <img src="../assets/images/atms.png" alt="ASTM International Compliance">
+                <p>Compliant with</p>
+                <h3>ASTM International</h3>
+            </div>
+        </div>
+
+        <!-- View More Button -->
+        <a href="#" class="view-more">view more →</a>
+
+        <!-- Clients Section with Swiper -->
+        <div class="clients-section">
+            <h3>OUR TRUSTED CLIENTS</h3>
+            <swiper-container class="clients-carousel" space-between="30" slides-per-view="3" loop="true"
+                autoplay-delay="2500">
+                <swiper-slide><img src="../assets/images/hassan-allam.png" alt="Hassan Allam"></swiper-slide>
+                <swiper-slide><img src="../assets/images/arab-contractors.png" alt="Arab Contractors"></swiper-slide>
+                <swiper-slide><img src="../assets/images/orascom.png" alt="Orascom"></swiper-slide>
+                <swiper-slide><img src="../assets/images/arab-contractors.png" alt="Arab Contractors"></swiper-slide>
+                <swiper-slide><img src="../assets/images/orascom.png" alt="Orascom"></swiper-slide>
+                <swiper-slide><img src="../assets/images/hassan-allam.png" alt="Hassan Allam"></swiper-slide>
+
+                <!-- Navigation Arrows -->
+                <swiper-button-next></swiper-button-next>
+                <swiper-button-prev></swiper-button-prev>
+            </swiper-container>
+
+            <a href="#" class="view-more">view more →</a>
+        </div>
+
+        <!-- Embedded Video -->
+        <div class="video-section">
+            <iframe width="560" height="560" src="https://www.youtube.com/embed/ntjkwIXWtrc?si=e4njgcp08xoZRh0N"
+                title="Why Choose Us Video" frameborder="0" allowfullscreen></iframe>
+        </div>
     </section>
 
-    <section id="responsibility" class="section responsibility">
-        <h2>Corporate Responsibility</h2>
-        <p>We know that having a positive impact on developing a better future is our most important investment. Our manufacturing process design aims to preserve the environment and create a better future for the next generation.</p>
-    </section>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Subscription Section -->
+        <div class="footer-subscribe">
+            <div class="footer-subscribe-left">
+                <h3>Subscribe to our Newsletter</h3>
+                <p>Get notified about latest products and events!</p>
+            </div>
+            <div class="footer-subscribe-right">
+                <input type="email" placeholder="Your email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
 
-    <footer>
-        <p>&copy; 2024 Tagro Egypt - All rights reserved.</p>
+        <!-- Content Section -->
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>About</p>
+                <p>Careers</p>
+                <p>Contact Us</p>
+            </div>
+            <div class="footer-middle-left">
+                <i class="fas fa-map"></i>
+                <p>18 B Secon Bldgs, El-Nozha, St, Nasr City, Cairo Governorate</p>
+            </div>
+            <div class="footer-middle-right">
+                <i class="fas fa-phone"></i>
+                <p>+20 24172409 <br> +20 100 218 0204</p>
+            </div>
+            <div class="footer-right">
+                <p><i class="fas fa-envelope"></i> info@tagro-Egypt.org</p>
+                <p><i class="fas fa-fax"></i> +20 24172409</p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <p>Copyright © 2024 Tagro Egypt</p>
+        </div>
+
+        <!-- Social Links (Add your social links here) -->
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
 </body>
+
 </html>
